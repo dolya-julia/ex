@@ -13,10 +13,18 @@ function PopUpHide(){
     history.back(); // 
 }
 // Обработка события нажатия кнопки назад в браузере
-window.onpopstate = (event) => {
+/*window.onpopstate = (event) => {
     var state = e.originalEvent.state;
     if (state != null)
     if (event.state["is_popup_opened"]) {
         PopUpHide();
     }
-};
+};*/
+$(window).on('popstate', function (e) {
+    var state = e.originalEvent.state;
+    if (state !== null) {
+        //load content with ajax
+        if (e.state["is_popup_opened"]) {
+            PopUpHide();
+    }
+});
