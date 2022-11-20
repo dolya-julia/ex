@@ -27,4 +27,5 @@ $(window).on('popstate', function (e) {
         if (e.state["is_popup_opened"]) {
             PopUpHide();
     }
+}
 });
