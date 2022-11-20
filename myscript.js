@@ -14,7 +14,7 @@ function PopUpHide(){
 }
 // Обработка события нажатия кнопки назад в браузере
 window.onpopstate = (event) => {
-    if (event.target.value != null)
+    if (event.state != null)
     if (event.state["is_popup_opened"]) {
         PopUpHide();
     }
