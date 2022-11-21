@@ -23,6 +23,7 @@ function PopUpHide(){
 $(window).on('popstate', function (e) {
     var state = e.originalEvent.state;
     if (state !== null) {
+        console.log("yes");
         //load content with ajax
         if (e.state["is_popup_opened"]) {
             PopUpHide();
